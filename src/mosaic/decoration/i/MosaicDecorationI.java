@@ -5,7 +5,6 @@
  */
 package mosaic.decoration.i;
 
-import java.lang.Math;
 import java.util.Scanner;
 
 /**
@@ -23,8 +22,7 @@ public class MosaicDecorationI {
         double bi = 0, pi = 0;
         double bp = 0, pp = 0, tc = 0;
         
-        Scanner in = new Scanner(System.in); 
-        System.out.print("No of Bathrooms: ");
+        Scanner in = new Scanner(System.in);
             int a = in.nextInt();
             if (a<= 100 && a>= 2){
                 n = a;
@@ -38,8 +36,6 @@ public class MosaicDecorationI {
                 cp = c;
             }
         
-        System.out.println("b: "+n+"   cb: "+cb+"   cp: "+cp);
-        
         for (int i = 0; i < n; i++) {
             double d = in.nextDouble();
             if (d<= 1000 && d>= 1){
@@ -51,17 +47,11 @@ public class MosaicDecorationI {
             }
         }
         
-        System.out.println("bi="+bi);
-        System.out.println("pi="+pi);
-        
         bp = Math.ceil(bi/10);
         pp = Math.ceil(pi/10);
         
-        System.out.println("bp="+bp);
-        System.out.println("pp="+pp);
-        
         tc = (bp*cb) + (pp*cp);
         
-        System.out.println("tc= "+(int)tc);
+        System.out.println((int)tc);
     }
 }
